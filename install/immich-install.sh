@@ -436,11 +436,11 @@ ln -s "$UPLOAD_DIR" "$ML_DIR"/upload
 
 msg_info "Installing GeoNames data"
 cd "$GEO_DIR"
-curl_with_retry "https://download.geonames.org/export/dump/admin1CodesASCII.txt" "admin1CodesASCII.txt"
-curl_with_retry "https://download.geonames.org/export/dump/admin2Codes.txt" "admin2Codes.txt"
-curl_with_retry "https://download.geonames.org/export/dump/countryInfo.txt" "countryInfo.txt"
-curl_with_retry "https://download.geonames.org/export/dump/cities500.zip" "cities500.zip"
-curl_with_retry "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" "ne_10m_admin_0_countries.geojson"
+curl_with_retry "http://download.geonames.org/export/dump/admin1CodesASCII.txt" "admin1CodesASCII.txt"
+curl_with_retry "http://download.geonames.org/export/dump/admin2Codes.txt" "admin2Codes.txt"
+curl_with_retry "http://download.geonames.org/export/dump/countryInfo.txt" "countryInfo.txt"
+curl_with_retry "http://download.geonames.org/export/dump/cities500.zip" "cities500.zip"
+curl_with_retry "http://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" "ne_10m_admin_0_countries.geojson"
 unzip -q cities500.zip
 date --iso-8601=seconds | tr -d "\n" >geodata-date.txt
 rm cities500.zip
