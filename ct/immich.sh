@@ -319,7 +319,7 @@ EOF
     grep -rl /usr/src | xargs -n1 sed -i "s|\/usr/src|$INSTALL_DIR|g"
     grep -rlE "'/build'" | xargs -n1 sed -i "s|'/build'|'$APP_DIR'|g"
     sed -i "s@\"/cache\"@\"$INSTALL_DIR/cache\"@g" "$ML_DIR"/immich_ml/config.py
-    [[ ! -f "$GEO_DIR/countryInfo.txt" ]] && wget "http://download.geonames.org/export/dump/countryInfo.txt" -O "/opt/immich/geodata/countryInfo.txt"
+    [[ ! -f "$GEO_DIR/countryInfo.txt" ]] && wget "http://192.168.88.118:8000/countryInfo.txt" -O "/opt/immich/geodata/countryInfo.txt"
     ln -s "${UPLOAD_DIR:-/opt/immich/upload}" "$APP_DIR"/upload
     ln -s "${UPLOAD_DIR:-/opt/immich/upload}" "$ML_DIR"/upload
     ln -s "$GEO_DIR" "$APP_DIR"
