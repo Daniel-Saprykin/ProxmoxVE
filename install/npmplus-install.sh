@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/ZoeyVid/NPMplus
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -60,7 +60,7 @@ read -r -p "${TAB3}Enter your ACME Email: " ACME_EMAIL_INPUT
 yq -i "
   .services.npmplus.environment |=
     (map(select(. != \"TZ=*\" and . != \"ACME_EMAIL=*\" and . != \"INITIAL_ADMIN_EMAIL=*\" and . != \"INITIAL_ADMIN_PASSWORD=*\")) +
-    [\"TZ=$TZ_INPUT\", \"ACME_EMAIL=$ACME_EMAIL_INPUT\", \"INITIAL_ADMIN_EMAIL=admin@local.com\", \"INITIAL_ADMIN_PASSWORD=community-scripts.org\"])
+    [\"TZ=$TZ_INPUT\", \"ACME_EMAIL=$ACME_EMAIL_INPUT\", \"INITIAL_ADMIN_EMAIL=admin@local.com\", \"INITIAL_ADMIN_PASSWORD=Daniel-Saprykin.org\"])
 " /opt/compose.yaml
 
 msg_info "Building and Starting NPMplus (Patience)"

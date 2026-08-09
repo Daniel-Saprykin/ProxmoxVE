@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.kimai.org/ | Github: https://github.com/kimai/kimai
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -57,10 +57,10 @@ $STD expect <<EOF
 set timeout -1
 log_user 0
 
-spawn bin/console kimai:user:create admin admin@community-scripts.org ROLE_SUPER_ADMIN
+spawn bin/console kimai:user:create admin admin@Daniel-Saprykin.org ROLE_SUPER_ADMIN
 
 expect "Please enter the password:"
-send "community-scripts.org\r"
+send "Daniel-Saprykin.org\r"
 
 expect eof
 EOF

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
-# Copyright (c) 2021-2026 community-scripts ORG
+source <(curl -s https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/build.func)
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: (AminGholizad)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/PanSalut/Koffan
 
 APP="Koffan"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: (AminGholizad)
 # License: MIT | https://github.com/AminGholizad/ProxmoxVED/raw/main/LICENSE
 # Source: https://github.com/PanSalut/Koffan

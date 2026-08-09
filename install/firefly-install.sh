@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: quantumryuu | Co-Author: Slaviša Arežina (tremor021)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://firefly-iii.org/ | Github: https://github.com/firefly-iii/firefly-iii
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

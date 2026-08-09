@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate-pr-template:
-    if: github.repository == 'community-scripts/ProxmoxVE'
+    if: github.repository == 'Daniel-Saprykin/ProxmoxVE'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -27,7 +27,7 @@ jobs:
             const allowedBots = [
               "push-app-to-main[bot]",
               "push-app-to-main",
-              "community-scripts-pr-app",
+              "Daniel-Saprykin-pr-app",
               "github-actions[bot]",
               "dependabot[bot]",
             ];
@@ -122,7 +122,7 @@ jobs:
             core.info(`Closing PR #${prNumber} — template validation failed.`);
 
             const templateUrl =
-              "https://github.com/community-scripts/ProxmoxVE/blob/main/.github/pull_request_template.md";
+              "https://github.com/Daniel-Saprykin/ProxmoxVE/blob/main/.github/pull_request_template.md";
             const failureList = failures.map((item) => `- ${item}`).join("\n");
 
             const comment = [

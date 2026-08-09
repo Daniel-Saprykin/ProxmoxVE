@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.home-assistant.io/
 
 APP="Podman-Home Assistant"
@@ -69,7 +69,7 @@ function update_script() {
     $STD curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
     $STD filebrowser config init -a '0.0.0.0'
     $STD filebrowser config set -a '0.0.0.0'
-    $STD filebrowser users add admin community-scripts.org --perm.admin
+    $STD filebrowser users add admin Daniel-Saprykin.org --perm.admin
     msg_ok "Installed FileBrowser"
 
     msg_info "Creating Service"
@@ -91,7 +91,7 @@ EOF
 
     msg_ok "Completed successfully!\n"
     echo -e "FileBrowser should be reachable by going to the following URL.
-         ${BL}http://$LOCAL_IP:8080${CL}   admin|community-scripts.org\n"
+         ${BL}http://$LOCAL_IP:8080${CL}   admin|Daniel-Saprykin.org\n"
     exit
   fi
   if [ "$UPD" == "4" ]; then

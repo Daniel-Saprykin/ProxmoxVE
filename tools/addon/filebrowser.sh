@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: tteck (tteckster) | Co-Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://filebrowser.org/ | Github: https://github.com/filebrowser/filebrowser
 
 APP="FileBrowser"
 APP_TYPE="addon"
 INSTALL_PATH="/usr/local/bin/filebrowser"
-DB_PATH="/usr/local/community-scripts/filebrowser.db"
+DB_PATH="/usr/local/Daniel-Saprykin/filebrowser.db"
 DEFAULT_PORT=8080
 
 if ! command -v curl &>/dev/null; then
@@ -21,10 +21,10 @@ if ! command -v curl &>/dev/null; then
     apt-get install -y curl >/dev/null 2>&1
   fi
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "filebrowser" "addon"
 
 # Enable error handling
@@ -117,9 +117,9 @@ if [[ "${install_prompt,,}" =~ ^(y|yes)$ ]]; then
   msg_ok "Installed ${APP}"
 
   msg_info "Creating FileBrowser directory"
-  mkdir -p /usr/local/community-scripts
-  chown root:root /usr/local/community-scripts
-  chmod 755 /usr/local/community-scripts
+  mkdir -p /usr/local/Daniel-Saprykin
+  chown root:root /usr/local/Daniel-Saprykin
+  chmod 755 /usr/local/Daniel-Saprykin
   touch "$DB_PATH"
   chown root:root "$DB_PATH"
   chmod 644 "$DB_PATH"
@@ -128,21 +128,21 @@ if [[ "${install_prompt,,}" =~ ^(y|yes)$ ]]; then
   read -r -p "Would you like to use No Authentication? (y/N): " auth_prompt
   if [[ "${auth_prompt,,}" =~ ^(y|yes)$ ]]; then
     msg_info "Configuring No Authentication"
-    cd /usr/local/community-scripts
+    cd /usr/local/Daniel-Saprykin
     $STD filebrowser config init -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
     $STD filebrowser config set -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
     $STD filebrowser config set --auth.method=noauth --database "$DB_PATH"
     if ! filebrowser users update 1 --perm.admin --database "$DB_PATH" &>/dev/null; then
-      $STD filebrowser users add admin community-scripts.org --perm.admin --database "$DB_PATH"
+      $STD filebrowser users add admin Daniel-Saprykin.org --perm.admin --database "$DB_PATH"
     fi
     msg_ok "No Authentication configured"
   else
     msg_info "Setting up default authentication"
-    cd /usr/local/community-scripts
+    cd /usr/local/Daniel-Saprykin
     $STD filebrowser config init -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
     $STD filebrowser config set -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
-    $STD filebrowser users add admin community-scripts.org --perm.admin --database "$DB_PATH"
-    msg_ok "Default authentication configured (admin:community-scripts.org)"
+    $STD filebrowser users add admin Daniel-Saprykin.org --perm.admin --database "$DB_PATH"
+    msg_ok "Default authentication configured (admin:Daniel-Saprykin.org)"
   fi
 
   msg_info "Creating service"
@@ -154,10 +154,10 @@ After=network-online.target
 
 [Service]
 User=root
-WorkingDirectory=/usr/local/community-scripts
-ExecStartPre=/bin/touch /usr/local/community-scripts/filebrowser.db
-ExecStartPre=/usr/local/bin/filebrowser config set -a "0.0.0.0" -p ${PORT} -d /usr/local/community-scripts/filebrowser.db
-ExecStart=/usr/local/bin/filebrowser -r / -d /usr/local/community-scripts/filebrowser.db -p ${PORT}
+WorkingDirectory=/usr/local/Daniel-Saprykin
+ExecStartPre=/bin/touch /usr/local/Daniel-Saprykin/filebrowser.db
+ExecStartPre=/usr/local/bin/filebrowser config set -a "0.0.0.0" -p ${PORT} -d /usr/local/Daniel-Saprykin/filebrowser.db
+ExecStart=/usr/local/bin/filebrowser -r / -d /usr/local/Daniel-Saprykin/filebrowser.db -p ${PORT}
 Restart=always
 
 [Install]
@@ -172,7 +172,7 @@ command="/usr/local/bin/filebrowser"
 command_args="-r / -d $DB_PATH -p $PORT"
 command_background=true
 pidfile="/var/run/filebrowser.pid"
-directory="/usr/local/community-scripts"
+directory="/usr/local/Daniel-Saprykin"
 
 depend() {
     need net

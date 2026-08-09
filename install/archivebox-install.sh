@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://archivebox.io/ | Github: https://github.com/ArchiveBox/ArchiveBox
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -62,10 +62,10 @@ expect "Email address"
 send "\r"
 
 expect "Password"
-send "community-scripts.org\r"
+send "Daniel-Saprykin.org\r"
 
 expect "Password (again)"
-send "community-scripts.org\r"
+send "Daniel-Saprykin.org\r"
 
 expect eof
 EOF

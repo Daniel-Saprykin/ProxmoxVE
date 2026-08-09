@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png" height="112px" alt="Proxmox VE Helper-Scripts Logo" />
+  <img src="https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/images/logo-81x112.png" height="112px" alt="Proxmox VE Helper-Scripts Logo" />
 
   <h1>Proxmox VE Helper-Scripts</h1>
   <p><strong>One-command installations for services, containers, and VMs on Proxmox VE</strong><br/>
   A community project — built on the foundation of <a href="https://github.com/tteck">@tteck</a>'s original work</p>
 
   <p>
-    <a href="https://community-scripts.org"><img src="https://img.shields.io/badge/Website-community--scripts.org-4c9b3f?style=flat-square" /></a>
+    <a href="https://Daniel-Saprykin.org"><img src="https://img.shields.io/badge/Website-community--scripts.org-4c9b3f?style=flat-square" /></a>
     <a href="https://discord.gg/3AnUqsXnmK"><img src="https://img.shields.io/badge/Discord-Join_us-7289da?style=flat-square&logo=discord&logoColor=white" /></a>
-    <a href="https://github.com/community-scripts/ProxmoxVE/stargazers"><img src="https://img.shields.io/github/stars/community-scripts/ProxmoxVE?style=flat-square&label=Stars&color=f5a623" /></a>
-    <a href="https://github.com/community-scripts/ProxmoxVE/blob/main/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-view-6c5ce7?style=flat-square" /></a>
+    <a href="https://github.com/Daniel-Saprykin/ProxmoxVE/stargazers"><img src="https://img.shields.io/github/stars/Daniel-Saprykin/ProxmoxVE?style=flat-square&label=Stars&color=f5a623" /></a>
+    <a href="https://github.com/Daniel-Saprykin/ProxmoxVE/blob/main/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-view-6c5ce7?style=flat-square" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" /></a>
   </p>
 </div>
@@ -41,7 +41,7 @@ The collection covers hundreds of services across categories like home automatio
 
 The fastest way to find and run scripts:
 
-1. Go to **[community-scripts.org](https://community-scripts.org)**
+1. Go to **[Daniel-Saprykin.org](https://Daniel-Saprykin.org)**
 2. Search for the service you want (e.g. "Home Assistant", "Nginx Proxy Manager", "Jellyfin")
 3. Copy the one-line install command from the script page
 4. Open your **Proxmox Shell** and paste it
@@ -81,7 +81,7 @@ The repository covers a wide range of categories. A few examples:
 | Security        | Vaultwarden, CrowdSec, Authentik                    |
 | Dev & Tools     | Gitea, Portainer, VS Code Server, n8n               |
 
-> Browse the full list at **[community-scripts.org/categories](https://community-scripts.org/categories)** — new scripts are added regularly.
+> Browse the full list at **[Daniel-Saprykin.org/categories](https://Daniel-Saprykin.org/categories)** — new scripts are added regularly.
 
 ---
 
@@ -93,16 +93,16 @@ This project runs on community contributions. Whether you want to write new scri
 
 | I want to…                            | Go here                                                                                           |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Add a **new** script                  | [ProxmoxVED](https://github.com/community-scripts/ProxmoxVED) — new scripts are tested here first |
+| Add a **new** script                  | [ProxmoxVED](https://github.com/Daniel-Saprykin/ProxmoxVED) — new scripts are tested here first |
 | Fix or improve an **existing** script | [Contributing Guidelines](CONTRIBUTING.md) — open a PR in this repo                               |
-| Report a bug or broken script         | [Issues](https://github.com/community-scripts/ProxmoxVE/issues)                                   |
-| Request a new script or feature       | [Discussions](https://github.com/community-scripts/ProxmoxVE/discussions)                         |
+| Report a bug or broken script         | [Issues](https://github.com/Daniel-Saprykin/ProxmoxVE/issues)                                   |
+| Request a new script or feature       | [Discussions](https://github.com/Daniel-Saprykin/ProxmoxVE/discussions)                         |
 | Report a security vulnerability       | [Security Policy](SECURITY.md)                                                                    |
 | Get help or chat with other users     | [Discord](https://discord.gg/3AnUqsXnmK)                                                          |
 
 ### Before you open a PR
 
-- **New scripts go to [ProxmoxVED](https://github.com/community-scripts/ProxmoxVED), not here.** PRs with new scripts opened directly against this repo will be closed.
+- **New scripts go to [ProxmoxVED](https://github.com/Daniel-Saprykin/ProxmoxVED), not here.** PRs with new scripts opened directly against this repo will be closed.
 - Bug fixes and improvements to existing scripts belong in this repo — read the [Contributing Guidelines](CONTRIBUTING.md) first.
 - Keep PRs focused. One fix or feature per PR.
 - Document what your script installs and any non-obvious decisions in the corresponding JSON metadata file.
@@ -171,19 +171,19 @@ This project runs on community contributions. Whether you want to write new scri
 </p>
 
 <p align="center">
-  <a href="https://www.star-history.com/?repos=community-scripts%2FProxmoxVE&type=date&legend=top-left">
+  <a href="https://www.star-history.com/?repos=Daniel-Saprykin%2FProxmoxVE&type=date&legend=top-left">
     <picture>
       <source
         media="(prefers-color-scheme: dark)"
-        srcset="https://api.star-history.com/chart?repos=community-scripts/ProxmoxVE&type=date&theme=dark&legend=top-left&sealed_token=-lUy2KH6pJryUyLCbiWRwFz3ilXMDFVFHm0lJcqh-Hl5e0QNNKjINNcXzULhaZVpBugN_TDaxOawEAuzwBc5Sjqa2mCRw9K6TdCioKRDsS_qXUwhkLQSCMRSg1schCdl4rQD8qEj7PWBjin-fyHnDm7NnM6akZp59jndG7qV7PrvG8nLBgDIuuA-wAI3"
+        srcset="https://api.star-history.com/chart?repos=Daniel-Saprykin/ProxmoxVE&type=date&theme=dark&legend=top-left&sealed_token=-lUy2KH6pJryUyLCbiWRwFz3ilXMDFVFHm0lJcqh-Hl5e0QNNKjINNcXzULhaZVpBugN_TDaxOawEAuzwBc5Sjqa2mCRw9K6TdCioKRDsS_qXUwhkLQSCMRSg1schCdl4rQD8qEj7PWBjin-fyHnDm7NnM6akZp59jndG7qV7PrvG8nLBgDIuuA-wAI3"
       />
       <source
         media="(prefers-color-scheme: light)"
-        srcset="https://api.star-history.com/chart?repos=community-scripts/ProxmoxVE&type=date&legend=top-left&sealed_token=-lUy2KH6pJryUyLCbiWRwFz3ilXMDFVFHm0lJcqh-Hl5e0QNNKjINNcXzULhaZVpBugN_TDaxOawEAuzwBc5Sjqa2mCRw9K6TdCioKRDsS_qXUwhkLQSCMRSg1schCdl4rQD8qEj7PWBjin-fyHnDm7NnM6akZp59jndG7qV7PrvG8nLBgDIuuA-wAI3"
+        srcset="https://api.star-history.com/chart?repos=Daniel-Saprykin/ProxmoxVE&type=date&legend=top-left&sealed_token=-lUy2KH6pJryUyLCbiWRwFz3ilXMDFVFHm0lJcqh-Hl5e0QNNKjINNcXzULhaZVpBugN_TDaxOawEAuzwBc5Sjqa2mCRw9K6TdCioKRDsS_qXUwhkLQSCMRSg1schCdl4rQD8qEj7PWBjin-fyHnDm7NnM6akZp59jndG7qV7PrvG8nLBgDIuuA-wAI3"
       />
       <img
         alt="Star History Chart"
-        src="https://api.star-history.com/chart?repos=community-scripts/ProxmoxVE&type=date&legend=top-left&sealed_token=-lUy2KH6pJryUyLCbiWRwFz3ilXMDFVFHm0lJcqh-Hl5e0QNNKjINNcXzULhaZVpBugN_TDaxOawEAuzwBc5Sjqa2mCRw9K6TdCioKRDsS_qXUwhkLQSCMRSg1schCdl4rQD8qEj7PWBjin-fyHnDm7NnM6akZp59jndG7qV7PrvG8nLBgDIuuA-wAI3"
+        src="https://api.star-history.com/chart?repos=Daniel-Saprykin/ProxmoxVE&type=date&legend=top-left&sealed_token=-lUy2KH6pJryUyLCbiWRwFz3ilXMDFVFHm0lJcqh-Hl5e0QNNKjINNcXzULhaZVpBugN_TDaxOawEAuzwBc5Sjqa2mCRw9K6TdCioKRDsS_qXUwhkLQSCMRSg1schCdl4rQD8qEj7PWBjin-fyHnDm7NnM6akZp59jndG7qV7PrvG8nLBgDIuuA-wAI3"
         width="700"
       />
     </picture>
@@ -203,8 +203,8 @@ This project is maintained by volunteers. All infrastructure costs come out of p
     <img src="https://img.shields.io/badge/Support_on_Ko--fi-FF5F5F?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi" />
   </a>
   &nbsp;
-  <a href="https://community-scripts.org/donate">
-    <img src="https://img.shields.io/badge/Donate-community--scripts.org%2Fdonate-4c9b3f?style=for-the-badge" alt="Donate via community-scripts.org" />
+  <a href="https://Daniel-Saprykin.org/donate">
+    <img src="https://img.shields.io/badge/Donate-community--scripts.org%2Fdonate-4c9b3f?style=for-the-badge" alt="Donate via Daniel-Saprykin.org" />
   </a>
 </div>
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://healthchecks.io/ | Github: https://github.com/healthchecks/healthchecks
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -35,7 +35,7 @@ PG_DB_NAME="healthchecks_db" PG_DB_USER="hc_user" PG_DB_PASS=$(openssl rand -bas
 
 msg_info "Setup Keys (Admin / Secret)"
 SECRET_KEY="$(openssl rand -base64 32 | tr -dc 'a-zA-Z0-9' | cut -c1-32)"
-ADMIN_EMAIL="admin@community-scripts.org"
+ADMIN_EMAIL="admin@Daniel-Saprykin.org"
 ADMIN_PASSWORD="$PG_DB_PASS"
 cat <<EOF >~/healthchecks.creds
 healthchecks Admin Email: $ADMIN_EMAIL

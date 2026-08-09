@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk (Canbiz) && Desert_Gamer
 # License: MIT
 
@@ -32,7 +32,7 @@ CM="${GN}✓${CL} "
 CROSS="${RD}✗${CL} "
 
 # Telemetry
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "add-iptag" "pve"
 
 # Stop any running spinner

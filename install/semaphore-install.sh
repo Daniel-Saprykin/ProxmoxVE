@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: kristocopani
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://semaphoreui.com/ | Github: https://github.com/semaphoreui/semaphore
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -40,7 +40,7 @@ cat <<EOF >/opt/semaphore/config.json
   "access_key_encryption": "${SEM_KEY}"
 }
 EOF
-$STD semaphore user add --admin --login admin --email admin@community-scripts.org --name Administrator --password "${SEM_PW}" --config /opt/semaphore/config.json
+$STD semaphore user add --admin --login admin --email admin@Daniel-Saprykin.org --name Administrator --password "${SEM_PW}" --config /opt/semaphore/config.json
 echo "${SEM_PW}" >~/semaphore.creds
 msg_ok "Setup Semaphore"
 

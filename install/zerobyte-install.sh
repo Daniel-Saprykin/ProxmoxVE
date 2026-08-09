@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
-# Author: community-scripts
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
+# Author: Daniel-Saprykin
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/nicotsx/zerobyte
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"

@@ -2,24 +2,24 @@
 
 Welcome! We're glad you want to contribute. This guide covers everything you need to add new scripts, improve existing ones, or help in other ways.
 
-For detailed coding standards and full documentation, visit **[community-scripts.org/docs](https://community-scripts.org/docs)**.
+For detailed coding standards and full documentation, visit **[Daniel-Saprykin.org/docs](https://Daniel-Saprykin.org/docs)**.
 
 ---
 
 ## How Can I Help?
 
 > [!IMPORTANT]
-> **New scripts** must always be submitted to [ProxmoxVED](https://github.com/community-scripts/ProxmoxVED) first — not to this repository.
+> **New scripts** must always be submitted to [ProxmoxVED](https://github.com/Daniel-Saprykin/ProxmoxVED) first — not to this repository.
 > PRs with new scripts opened directly against ProxmoxVE **will be closed without review**.
 > **Bug fixes, improvements, and features for existing scripts** go here (ProxmoxVE).
 
 | I want to…                                  | Where to go                                                                                  |
 | :------------------------------------------ | :------------------------------------------------------------------------------------------- |
-| **Add a brand-new script**                  | [ProxmoxVED](https://github.com/community-scripts/ProxmoxVED) — testing repo for new scripts |
+| **Add a brand-new script**                  | [ProxmoxVED](https://github.com/Daniel-Saprykin/ProxmoxVED) — testing repo for new scripts |
 | **Fix a bug or improve an existing script** | This repo (ProxmoxVE) — open a PR here                                                       |
 | **Add a feature to an existing script**     | This repo (ProxmoxVE) — open a PR here                                                       |
-| Report a bug or broken script               | [Open an Issue](https://github.com/community-scripts/ProxmoxVE/issues)                       |
-| Request a new script or feature             | [Start a Discussion](https://github.com/community-scripts/ProxmoxVE/discussions)             |
+| Report a bug or broken script               | [Open an Issue](https://github.com/Daniel-Saprykin/ProxmoxVE/issues)                       |
+| Request a new script or feature             | [Start a Discussion](https://github.com/Daniel-Saprykin/ProxmoxVE/discussions)             |
 | Report a security vulnerability             | [Security Policy](SECURITY.md)                                                               |
 | Chat with contributors                      | [Discord](https://discord.gg/3AnUqsXnmK)                                                     |
 
@@ -45,7 +45,7 @@ Every script consists of two files:
 | `ct/AppName.sh`              | Container creation, variable setup, and update handling |
 | `install/AppName-install.sh` | Application installation logic                          |
 
-Use existing scripts in [`ct/`](ct/) and [`install/`](install/) as reference. Full coding standards and annotated templates are at **[community-scripts.org/docs/contribution](https://community-scripts.org/docs/contribution)**.
+Use existing scripts in [`ct/`](ct/) and [`install/`](install/) as reference. Full coding standards and annotated templates are at **[Daniel-Saprykin.org/docs/contribution](https://Daniel-Saprykin.org/docs/contribution)**.
 
 ---
 
@@ -55,7 +55,7 @@ Use existing scripts in [`ct/`](ct/) and [`install/`](install/) as reference. Fu
 
 New scripts are **not accepted directly in this repository**. The workflow is:
 
-1. Fork [ProxmoxVED](https://github.com/community-scripts/ProxmoxVED) and clone it
+1. Fork [ProxmoxVED](https://github.com/Daniel-Saprykin/ProxmoxVED) and clone it
 2. Create a branch: `git switch -c feat/myapp`
 3. Write your two script files:
    - `ct/myapp.sh`
@@ -64,7 +64,7 @@ New scripts are **not accepted directly in this repository**. The workflow is:
 5. Open a PR in **ProxmoxVED** for review and testing
 6. Once accepted and verified there, the script will be promoted to ProxmoxVE by maintainers
 
-Follow the coding standards at [community-scripts.org/docs/contribution](https://community-scripts.org/docs/contribution).
+Follow the coding standards at [Daniel-Saprykin.org/docs/contribution](https://Daniel-Saprykin.org/docs/contribution).
 
 ---
 
@@ -87,7 +87,7 @@ Changes to scripts that already exist in ProxmoxVE go directly here:
 
 3. Make your changes to the relevant files in `ct/` and/or `install/`
 
-4. Open a PR from your fork to `community-scripts/ProxmoxVE/main`
+4. Open a PR from your fork to `Daniel-Saprykin/ProxmoxVE/main`
 
 Your PR should only contain the files you changed. Do not include unrelated modifications.
 
@@ -153,7 +153,7 @@ generator can offer them as fields:
 `select` (with `options`). Mark anything credential-like `secret` — the
 generator keeps those out of shareable links and out of the on-screen summary.
 
-Full standards and examples: **[community-scripts.org/docs/contribution](https://community-scripts.org/docs/contribution)**
+Full standards and examples: **[Daniel-Saprykin.org/docs/contribution](https://Daniel-Saprykin.org/docs/contribution)**
 
 ---
 
@@ -162,7 +162,7 @@ Full standards and examples: **[community-scripts.org/docs/contribution](https:/
 Set the `dev_mode` variable to enable debugging features when testing. Flags can be combined (comma-separated):
 
 ```bash
-dev_mode="trace,keep" bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/myapp.sh)"
+dev_mode="trace,keep" bash -c "$(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/ct/myapp.sh)"
 ```
 
 | Flag         | Description                                                  |
@@ -171,7 +171,7 @@ dev_mode="trace,keep" bash -c "$(curl -fsSL https://raw.githubusercontent.com/co
 | `keep`       | Prevents the container from being deleted if the build fails |
 | `pause`      | Pauses execution at key points before customization          |
 | `breakpoint` | Drops to a shell at hardcoded `breakpoint` calls in scripts  |
-| `logs`       | Saves detailed build logs to `/var/log/community-scripts/`   |
+| `logs`       | Saves detailed build logs to `/var/log/Daniel-Saprykin/`   |
 | `dryrun`     | Bypasses actual container creation (limited support)         |
 | `motd`       | Forces an update of the Message of the Day                   |
 
@@ -182,5 +182,5 @@ dev_mode="trace,keep" bash -c "$(curl -fsSL https://raw.githubusercontent.com/co
 - **Website metadata** (name, description, logo, tags) is managed via the website — use the "Report Issue" link on any script page to request changes. Do not submit metadata changes via repo files.
 - **JSON files** in `json/` define script properties used by the website. See existing files for structure reference.
 - Keep PRs small and focused. One fix or feature per PR is ideal.
-- PRs with **new scripts** opened against ProxmoxVE will be closed — submit them to [ProxmoxVED](https://github.com/community-scripts/ProxmoxVED) instead.
+- PRs with **new scripts** opened against ProxmoxVE will be closed — submit them to [ProxmoxVED](https://github.com/Daniel-Saprykin/ProxmoxVED) instead.
 - PRs that fail CI checks will not be merged.

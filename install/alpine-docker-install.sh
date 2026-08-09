@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 tteck
 # Author: tteck (tteckster)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.docker.com/
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -39,8 +39,8 @@ if [[ "${prompt,,}" =~ ^(y|yes)$ ]]; then
   msg_ok "Installed Docker Compose $DOCKER_COMPOSE_LATEST_VERSION"
 fi
 
-if prompt_confirm "${TAB3}Would you like to install Portainer (UI) via the community-scripts addon?" "n" 60; then
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/portainer.sh)" <<<"y"
+if prompt_confirm "${TAB3}Would you like to install Portainer (UI) via the Daniel-Saprykin addon?" "n" 60; then
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/tools/addon/portainer.sh)" <<<"y"
 else
   read -r -p "${TAB3}Would you like to add the Portainer Agent? <y/N> " prompt
   if [[ "${prompt,,}" =~ ^(y|yes)$ ]]; then

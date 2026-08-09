@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/9001/copyparty
 
 if ! command -v curl &>/dev/null; then
@@ -15,10 +15,10 @@ if ! command -v curl &>/dev/null; then
     apt-get install -y curl >/dev/null 2>&1
   fi
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "copyparty" "addon"
 
 # Enable error handling
@@ -155,9 +155,9 @@ function install() {
   else
     read -rp "${TAB}Set admin username [admin]: " admin_user
     admin_user=${admin_user:-admin}
-    read -rsp "${TAB}Set admin password [community-scripts.org]: " admin_pass
+    read -rsp "${TAB}Set admin password [Daniel-Saprykin.org]: " admin_pass
     echo ""
-    admin_pass=${admin_pass:-community-scripts.org}
+    admin_pass=${admin_pass:-Daniel-Saprykin.org}
     msg_ok "Configured with admin user: ${admin_user}"
   fi
 
@@ -287,7 +287,7 @@ SERVICEEOF
   cat <<'UPDATEEOF' >/usr/local/bin/update_copyparty
 #!/usr/bin/env bash
 # CopyParty Update Script
-type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/copyparty.sh)"
+type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/tools/addon/copyparty.sh)"
 UPDATEEOF
   chmod +x /usr/local/bin/update_copyparty
   msg_ok "Created update script (/usr/local/bin/update_copyparty)"

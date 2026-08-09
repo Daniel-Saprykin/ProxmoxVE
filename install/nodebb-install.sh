@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2024 tteck
 # Author: MickLesk (Canbiz)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/NodeBB/NodeBB
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -91,16 +91,16 @@ expect "Format: mongodb://*" {
     send "$MONGO_CONNECTION_STRING\r"
 }
 expect "Administrator username" {
-    send "community-scripts\r"
+    send "Daniel-Saprykin\r"
 }
 expect "Administrator email address" {
-    send "admin@community-scripts.org\r"
+    send "admin@Daniel-Saprykin.org\r"
 }
 expect "Password" {
-    send "community-scripts\r"
+    send "Daniel-Saprykin\r"
 }
 expect "Confirm Password" {
-    send "community-scripts\r"
+    send "Daniel-Saprykin\r"
 }
 expect eof
 EOF

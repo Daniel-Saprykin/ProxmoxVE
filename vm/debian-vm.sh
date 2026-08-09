@@ -1,10 +1,10 @@
 ﻿#!/usr/bin/env bash
 
-# Copyright (c) 2021-2025 community-scripts ORG
+# Copyright (c) 2021-2025 Daniel-Saprykin ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 
-source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func)
+source /dev/stdin <<<$(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/api.func)
 
 function header_info {
   clear
@@ -568,8 +568,8 @@ fi
 DESCRIPTION=$(
   cat <<EOF
 <div align='center'>
-  <a href='https://community-scripts.org' target='_blank' rel='noopener noreferrer'>
-    <img src='https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png' alt='Logo' style='width:81px;height:112px;'/>
+  <a href='https://Daniel-Saprykin.org' target='_blank' rel='noopener noreferrer'>
+    <img src='https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/images/logo-81x112.png' alt='Logo' style='width:81px;height:112px;'/>
   </a>
 
   <h2 style='font-size: 24px; margin: 20px 0;'>Debian VM</h2>
@@ -582,15 +582,15 @@ DESCRIPTION=$(
   
   <span style='margin: 0 10px;'>
     <i class="fa fa-github fa-fw" style="color: #f5f5f5;"></i>
-    <a href='https://github.com/community-scripts/ProxmoxVE' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>GitHub</a>
+    <a href='https://github.com/Daniel-Saprykin/ProxmoxVE' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>GitHub</a>
   </span>
   <span style='margin: 0 10px;'>
     <i class="fa fa-comments fa-fw" style="color: #f5f5f5;"></i>
-    <a href='https://github.com/community-scripts/ProxmoxVE/discussions' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Discussions</a>
+    <a href='https://github.com/Daniel-Saprykin/ProxmoxVE/discussions' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Discussions</a>
   </span>
   <span style='margin: 0 10px;'>
     <i class="fa fa-exclamation-circle fa-fw" style="color: #f5f5f5;"></i>
-    <a href='https://github.com/community-scripts/ProxmoxVE/issues' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Issues</a>
+    <a href='https://github.com/Daniel-Saprykin/ProxmoxVE/issues' target='_blank' rel='noopener noreferrer' style='text-decoration: none; color: #00617f;'>Issues</a>
   </span>
 </div>
 EOF
@@ -612,4 +612,4 @@ if [ "$START_VM" == "yes" ]; then
 fi
 
 msg_ok "Completed successfully!\n"
-echo "More Info at https://github.com/community-scripts/ProxmoxVE/discussions/836"
+echo "More Info at https://github.com/Daniel-Saprykin/ProxmoxVE/discussions/836"

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: BvdBerg01 | Co-Author: remz1337
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/refs/heads/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "update-apps" "pve"
 
 # =============================================================================
@@ -23,9 +23,9 @@ var_backup_storage="${var_backup_storage:-}"
 
 # var_container: Which containers to update
 #   Options:
-#     - "all"         : All containers with community-scripts tags
-#     - "all_running" : Only running containers with community-scripts tags
-#     - "all_stopped" : Only stopped containers with community-scripts tags
+#     - "all"         : All containers with Daniel-Saprykin tags
+#     - "all_running" : Only running containers with Daniel-Saprykin tags
+#     - "all_stopped" : Only stopped containers with Daniel-Saprykin tags
 #     - "101,102,109" : Comma-separated list of specific container IDs
 #     - ""            : Interactive selection via Whiptail
 var_container="${var_container:-}"
@@ -81,7 +81,7 @@ function print_usage() {
   cat <<EOF
 Usage: $(basename "$0") [OPTIONS]
 
-Update LXC containers created with community-scripts.
+Update LXC containers created with Daniel-Saprykin.
 
 Options:
   --help              Show this help message
@@ -158,7 +158,7 @@ function validate_service_script() {
   local name="$1"
   sanitize_service_name "$name" || return 1
   curl -fsSL --max-time 10 -o /dev/null \
-    "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/${name}.sh" 2>/dev/null
+    "https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/ct/${name}.sh" 2>/dev/null
 }
 
 function detect_service() {
@@ -234,7 +234,7 @@ function dry_run_container() {
 
 function backup_container() {
   msg_info "Creating backup for container $1"
-  vzdump $1 --compress zstd --storage $STORAGE_CHOICE -notes-template "{{guestname}} - community-scripts backup updater" >/dev/null 2>&1
+  vzdump $1 --compress zstd --storage $STORAGE_CHOICE -notes-template "{{guestname}} - Daniel-Saprykin backup updater" >/dev/null 2>&1
   status=$?
 
   if [ $status -eq 0 ]; then
@@ -283,11 +283,11 @@ header_info
 # =============================================================================
 # LOGGING SETUP
 # Key events are written directly to a timestamped log file under
-# /usr/local/community-scripts/update_apps/ — this avoids any stdout
+# /usr/local/Daniel-Saprykin/update_apps/ — this avoids any stdout
 # redirection that would break interactive spinners or whiptail dialogs.
 # The full summary table is appended at the end of the run.
 # =============================================================================
-LOG_DIR="/usr/local/community-scripts/update_apps"
+LOG_DIR="/usr/local/Daniel-Saprykin/update_apps"
 mkdir -p "$LOG_DIR"
 LOG_FILE="${LOG_DIR}/$(date '+%Y%m%d_%H%M%S').log"
 echo "Update started: $(date '+%Y-%m-%d %H:%M:%S')" >"$LOG_FILE"
@@ -490,7 +490,7 @@ for container in $CHOICE; do
   log_write "Container $container: detected service '${service}'"
 
   #2) Extract service build/update resource requirements from config/installation file
-  script=$(curl -fsSL "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/${service}.sh")
+  script=$(curl -fsSL "https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/ct/${service}.sh")
 
   #2.1) Check if the script downloaded successfully
   if [ $? -ne 0 ] || [ -z "${script}" ]; then

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://release-argus.io/ | Github: https://github.com/release-argus/Argus
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -51,15 +51,15 @@ service:
       icon_link_to: https://release-argus.io
       web_url: https://github.com/release-argus/Argus/blob/master/CHANGELOG.md
 
-  community-scripts/ProxmoxVE:
+  Daniel-Saprykin/ProxmoxVE:
     latest_version:
       type: github
-      url: community-scripts/ProxmoxVE
+      url: Daniel-Saprykin/ProxmoxVE
       use_prerelease: false
     dashboard:
-      icon: https://raw.githubusercontent.com/community-scripts/ProxmoxVE/refs/heads/main/misc/images/logo.png
-      icon_link_to: https://community-scripts.org/
-      web_url: https://github.com/community-scripts/ProxmoxVE/releases
+      icon: https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/refs/heads/main/misc/images/logo.png
+      icon_link_to: https://Daniel-Saprykin.org/
+      web_url: https://github.com/Daniel-Saprykin/ProxmoxVE/releases
 EOF
 msg_ok "Setup Config"
 

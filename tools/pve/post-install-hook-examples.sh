@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  Community-Scripts ProxmoxVE — Post-Install Hook: Example Library
+#  Daniel-Saprykin ProxmoxVE — Post-Install Hook: Example Library
 # ----------------------------------------------------------------------------
 #  This file is NOT meant to be executed as-is.
 #  It is a collection of complete, copy-pasteable example hooks for the
@@ -11,11 +11,11 @@
 #  In the ct/*.sh CT scripts (or via Advanced Settings → Step 28) you can
 #  point `var_post_install` to an absolute path on the Proxmox HOST, e.g.:
 #
-#      # in /root/.community-scripts/default.vars
-#      var_post_install=/opt/community-scripts/hooks/notify.sh
+#      # in /root/.Daniel-Saprykin/default.vars
+#      var_post_install=/opt/Daniel-Saprykin/hooks/notify.sh
 #
 #      # OR per-app, in app.vars
-#      var_post_install=/opt/community-scripts/hooks/vaultwarden-postprovision.sh
+#      var_post_install=/opt/Daniel-Saprykin/hooks/vaultwarden-postprovision.sh
 #
 #      # OR interactively in the Advanced Settings whiptail (Step 28).
 #
@@ -23,7 +23,7 @@
 #  AFTER the container is fully provisioned, started and the description
 #  is set. stdout/stderr is captured to:
 #
-#      /var/log/community-scripts/post-install-<CTID>.log
+#      /var/log/Daniel-Saprykin/post-install-<CTID>.log
 #
 #  AVAILABLE ENV VARIABLES
 #  -----------------------
@@ -49,8 +49,8 @@
 #  HOW TO USE THIS FILE
 #  --------------------
 #    1. Copy ONE example block (between the BEGIN/END markers) into a new
-#       file on the Proxmox host, e.g. /opt/community-scripts/hooks/notify.sh
-#    2. chmod +x /opt/community-scripts/hooks/notify.sh   (optional)
+#       file on the Proxmox host, e.g. /opt/Daniel-Saprykin/hooks/notify.sh
+#    2. chmod +x /opt/Daniel-Saprykin/hooks/notify.sh   (optional)
 #    3. Set var_post_install in default.vars / app.vars or pick the path
 #       in Advanced Settings.
 # ============================================================================
@@ -61,13 +61,13 @@
 #  Name        : minimal-logger.sh
 #  Purpose     : Append every newly created LXC to a single CSV-ish log.
 #  Difficulty  : ⭐ Beginner
-#  Side effects: Writes to /var/log/community-scripts/created-lxcs.log
+#  Side effects: Writes to /var/log/Daniel-Saprykin/created-lxcs.log
 #  Use case    : You just want a paper trail of "what got created when".
 # ============================================================================
 #!/usr/bin/env bash
 set -euo pipefail
 
-LOG_DIR="/var/log/community-scripts"
+LOG_DIR="/var/log/Daniel-Saprykin"
 LOG_FILE="${LOG_DIR}/created-lxcs.log"
 
 mkdir -p "$LOG_DIR"
@@ -118,7 +118,7 @@ TS="$(date -Iseconds)"
 read -r -d '' DISCORD_PAYLOAD <<JSON || true
 {
   "username": "Proxmox - ${NODE}",
-  "avatar_url": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+  "avatar_url": "https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/images/logo-81x112.png",
   "embeds": [{
     "title": "✅ ${APP} LXC created",
     "description": "A new community-script LXC has been provisioned on **${NODE}**.",
@@ -132,7 +132,7 @@ read -r -d '' DISCORD_PAYLOAD <<JSON || true
       {"name": "Bridge",   "value": "${BRG}",     "inline": true},
       {"name": "Storage",  "value": "${STORAGE}", "inline": true}
     ],
-    "footer": {"text": "community-scripts.org"}
+    "footer": {"text": "Daniel-Saprykin.org"}
   }]
 }
 JSON
@@ -325,7 +325,7 @@ echo "Pinging Uptime-Kuma push monitor for ${HN}"
 curl -fsS --max-time 5 \
   --get \
   --data-urlencode "status=up" \
-  --data-urlencode "msg=created by community-scripts" \
+  --data-urlencode "msg=created by Daniel-Saprykin" \
   --data-urlencode "ping=1" \
   --data-urlencode "label=${HN}" \
   "${UPTIME_KUMA_PUSH_BASE}" >/dev/null ||

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: kristocopani
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.inspircd.org/ | Github: https://github.com/inspircd/inspircd
 
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
@@ -17,7 +17,7 @@ fetch_and_deploy_gh_release "inspircd" "inspircd/inspircd" "binary" "latest" "/o
 
 msg_info "Configuring InspIRCd"
 cat <<EOF >/etc/inspircd/inspircd.conf
-<define name="networkDomain" value="community-scripts.org">
+<define name="networkDomain" value="Daniel-Saprykin.org">
 <define name="networkName" value="Proxmox VE Helper-Scripts">
 
 <server

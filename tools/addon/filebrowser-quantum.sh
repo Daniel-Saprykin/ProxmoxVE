@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2021-2026 community-scripts ORG
+# Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Author: MickLesk
-# License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
+# License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/filebrowserspace/quantum
 
 APP="FileBrowser Quantum"
 APP_TYPE="addon"
 INSTALL_PATH="/usr/local/bin/filebrowser"
-CONFIG_PATH="/usr/local/community-scripts/fq-config.yaml"
+CONFIG_PATH="/usr/local/Daniel-Saprykin/fq-config.yaml"
 DEFAULT_PORT=8080
 SRC_DIR="/"
 
@@ -22,10 +22,10 @@ if ! command -v curl &>/dev/null; then
     apt-get install -y curl >/dev/null 2>&1
   fi
 fi
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/tools.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/api.func) 2>/dev/null || true
 declare -f init_tool_telemetry &>/dev/null && init_tool_telemetry "filebrowser-quantum" "addon"
 
 # Enable error handling
@@ -69,7 +69,7 @@ else
 fi
 
 # Detect legacy FileBrowser installation
-LEGACY_DB="/usr/local/community-scripts/filebrowser.db"
+LEGACY_DB="/usr/local/Daniel-Saprykin/filebrowser.db"
 LEGACY_BIN="/usr/local/bin/filebrowser"
 LEGACY_SERVICE_DEB="/etc/systemd/system/filebrowser.service"
 LEGACY_SERVICE_ALP="/etc/init.d/filebrowser"
@@ -154,9 +154,9 @@ mv -f /usr/local/bin/filebrowser-quantum "$INSTALL_PATH"
 msg_ok "Installed ${APP}"
 
 msg_info "Preparing configuration directory"
-mkdir -p /usr/local/community-scripts
-chown root:root /usr/local/community-scripts
-chmod 755 /usr/local/community-scripts
+mkdir -p /usr/local/Daniel-Saprykin
+chown root:root /usr/local/Daniel-Saprykin
+chmod 755 /usr/local/Daniel-Saprykin
 msg_ok "Directory prepared"
 
 echo -n "${TAB}Use No Authentication? (y/N): "
@@ -206,9 +206,9 @@ server:
             - neverWatchPath: "/lost+found"
 auth:
   adminUsername: admin
-  adminPassword: community-scripts.org
+  adminPassword: Daniel-Saprykin.org
 EOF
-  msg_ok "Configured with default admin (admin / community-scripts.org)"
+  msg_ok "Configured with default admin (admin / Daniel-Saprykin.org)"
 fi
 
 msg_info "Creating service"
@@ -220,7 +220,7 @@ After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/usr/local/community-scripts
+WorkingDirectory=/usr/local/Daniel-Saprykin
 ExecStart=/usr/local/bin/filebrowser -c $CONFIG_PATH
 Restart=always
 
@@ -235,8 +235,8 @@ else
 command="/usr/local/bin/filebrowser"
 command_args="-c $CONFIG_PATH"
 command_background=true
-directory="/usr/local/community-scripts"
-pidfile="/usr/local/community-scripts/pidfile"
+directory="/usr/local/Daniel-Saprykin"
+pidfile="/usr/local/Daniel-Saprykin/pidfile"
 
 depend() {
     need net

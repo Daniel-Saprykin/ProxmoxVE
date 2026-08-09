@@ -9,16 +9,16 @@ permissions:
 
 jobs:
   close_issue:
-    if: github.event.pull_request.merged == true && github.repository == 'community-scripts/ProxmoxVE'
+    if: github.event.pull_request.merged == true && github.repository == 'Daniel-Saprykin/ProxmoxVE'
     runs-on: self-hosted
     env:
-      DEV_REPO: community-scripts/ProxmoxVED
+      DEV_REPO: Daniel-Saprykin/ProxmoxVED
 
     steps:
       - name: Checkout target repo (merge commit)
         uses: actions/checkout@v7
         with:
-          repository: community-scripts/ProxmoxVE
+          repository: Daniel-Saprykin/ProxmoxVE
           ref: ${{ github.event.pull_request.merge_commit_sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -53,7 +53,7 @@ jobs:
             if [ -n "$s" ]; then
               slugs="$slugs $s"
             fi
-          done < <(gh pr view "$PR_NUMBER" --repo community-scripts/ProxmoxVE --json files --jq '.files[].path')
+          done < <(gh pr view "$PR_NUMBER" --repo Daniel-Saprykin/ProxmoxVE --json files --jq '.files[].path')
 
           slugs=$(printf '%s\n' $slugs | sed '/^$/d' | sort -u | tr '\n' ' ' | xargs || true)
           printf '%s' "$slugs" > pocketbase_slugs.txt
@@ -71,7 +71,7 @@ jobs:
           # creates, so migration PRs carry an exact back-reference. Guessing from
           # titles or file names is never needed for them.
           matched=$(printf '%s' "$PR_BODY" \
-            | grep -oE 'community-scripts/ProxmoxVED#[0-9]+' \
+            | grep -oE 'Daniel-Saprykin/ProxmoxVED#[0-9]+' \
             | sed 's/.*#//' || true)
 
           if [ -n "$matched" ]; then
