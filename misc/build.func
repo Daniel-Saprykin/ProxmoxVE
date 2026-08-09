@@ -3282,7 +3282,7 @@ diagnostics_check() {
 DIAGNOSTICS=${DIAGNOSTICS}
 
 # Daniel-Saprykin Telemetry Configuration
-# https://telemetry.Daniel-Saprykin.org
+# https://telemetry.github.com
 #
 # This file stores your telemetry preference.
 # Set DIAGNOSTICS=yes to share anonymous installation data.
@@ -3308,7 +3308,7 @@ diagnostics_menu() {
     "Telemetry is currently: ${status_text}\n\n"
     "Anonymous data helps us improve scripts and track issues.\n"
     "No personal data is ever collected.\n\n"
-    "More info: https://telemetry.Daniel-Saprykin.org\n\n"
+    "More info: https://telemetry.github.com\n\n"
     "Do you want to ${current:+change this setting}?"
   )
 
@@ -3939,7 +3939,7 @@ runtime_script_status_guard() {
   script_slug="$(echo "$script_slug" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')"
   [[ -z "$script_slug" ]] && return 0
 
-  local api_url="https://db.Daniel-Saprykin.org/api/collections/script_scripts/records?filter=(slug='${script_slug}')&perPage=1&fields=slug,is_disabled,is_deleted,disable_message,deleted_message,pinned_version,pin_reason"
+  local api_url="https://db.github.com/api/collections/script_scripts/records?filter=(slug='${script_slug}')&perPage=1&fields=slug,is_disabled,is_deleted,disable_message,deleted_message,pinned_version,pin_reason"
   local response
   if ! response=$(curl -fsSL --connect-timeout 2 --max-time 3 "$api_url" 2>/dev/null); then
     msg_warn "Script status check is unavailable. Continuing without status verification."
@@ -3960,7 +3960,7 @@ runtime_script_status_guard() {
   pin_reason=$(printf '%s' "$response" | sed -n 's/.*"pin_reason"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' | head -1)
   is_deleted=${is_deleted:-false}
   is_disabled=${is_disabled:-false}
-  info_url="https://Daniel-Saprykin.org/scripts/${script_slug}"
+  info_url="https://github.com/scripts/${script_slug}"
 
   if [[ "$is_deleted" == "true" ]]; then
     msg_error "This script is no longer available in Daniel-Saprykin."
@@ -7138,14 +7138,14 @@ description() {
 
   script_slug="${SCRIPT_SLUG:-${NSAPP}}"
   script_slug="$(echo "$script_slug" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')"
-  script_url="https://Daniel-Saprykin.org/scripts/${script_slug}"
-  donate_url="https://Daniel-Saprykin.org/donate"
+  script_url="https://github.com/scripts/${script_slug}"
+  donate_url="https://github.com/donate"
 
   # Generate LXC Description
   DESCRIPTION=$(
     cat <<EOF
 <div align='center'>
-  <a href='https://Daniel-Saprykin.org' target='_blank' rel='noopener noreferrer'>
+  <a href='https://github.com' target='_blank' rel='noopener noreferrer'>
     <img src='https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/images/logo-81x112.png' alt='Logo' style='width:81px;height:112px;'/>
   </a>
 

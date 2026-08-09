@@ -62,10 +62,10 @@ expect "Email address"
 send "\r"
 
 expect "Password"
-send "Daniel-Saprykin.org\r"
+send "github.com\r"
 
 expect "Password (again)"
-send "Daniel-Saprykin.org\r"
+send "github.com\r"
 
 expect eof
 EOF

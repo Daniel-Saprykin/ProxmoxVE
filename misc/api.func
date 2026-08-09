@@ -7,7 +7,7 @@
 # ==============================================================================
 #
 # Provides functions for sending anonymous telemetry data via the community
-# telemetry ingest service at telemetry.Daniel-Saprykin.org.
+# telemetry ingest service at telemetry.github.com.
 #
 # DESIGN PRINCIPLES:
 #   1. SINGLE REPORTER: only the HOST sends terminal statuses (success/failed/
@@ -43,7 +43,7 @@
 # ==============================================================================
 # Telemetry Configuration
 # ==============================================================================
-TELEMETRY_URL="${TELEMETRY_URL:-https://telemetry.Daniel-Saprykin.org/telemetry}"
+TELEMETRY_URL="${TELEMETRY_URL:-https://telemetry.github.com/telemetry}"
 
 # Timeout for progress pings (seconds)
 TELEMETRY_TIMEOUT=5

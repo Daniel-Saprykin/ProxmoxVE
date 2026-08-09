@@ -94,7 +94,7 @@ expect "Administrator username" {
     send "Daniel-Saprykin\r"
 }
 expect "Administrator email address" {
-    send "admin@Daniel-Saprykin.org\r"
+    send "admin@github.com\r"
 }
 expect "Password" {
     send "Daniel-Saprykin\r"

@@ -60,7 +60,7 @@ read -r -p "${TAB3}Enter your ACME Email: " ACME_EMAIL_INPUT
 yq -i "
   .services.npmplus.environment |=
     (map(select(. != \"TZ=*\" and . != \"ACME_EMAIL=*\" and . != \"INITIAL_ADMIN_EMAIL=*\" and . != \"INITIAL_ADMIN_PASSWORD=*\")) +
-    [\"TZ=$TZ_INPUT\", \"ACME_EMAIL=$ACME_EMAIL_INPUT\", \"INITIAL_ADMIN_EMAIL=admin@local.com\", \"INITIAL_ADMIN_PASSWORD=Daniel-Saprykin.org\"])
+    [\"TZ=$TZ_INPUT\", \"ACME_EMAIL=$ACME_EMAIL_INPUT\", \"INITIAL_ADMIN_EMAIL=admin@local.com\", \"INITIAL_ADMIN_PASSWORD=github.com\"])
 " /opt/compose.yaml
 
 msg_info "Building and Starting NPMplus (Patience)"

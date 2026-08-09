@@ -206,9 +206,9 @@ server:
             - neverWatchPath: "/lost+found"
 auth:
   adminUsername: admin
-  adminPassword: Daniel-Saprykin.org
+  adminPassword: github.com
 EOF
-  msg_ok "Configured with default admin (admin / Daniel-Saprykin.org)"
+  msg_ok "Configured with default admin (admin / github.com)"
 fi
 
 msg_info "Creating service"

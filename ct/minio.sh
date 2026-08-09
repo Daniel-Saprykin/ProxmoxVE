@@ -11,5 +11,5 @@ color
 
 msg_error "This script is no longer available in Daniel-Saprykin."
 msg_error "Repository is archived. Minio is gone"
-msg_warn "More info: https://Daniel-Saprykin.org/scripts/minio"
+msg_warn "More info: https://github.com/scripts/minio"
 exit 1

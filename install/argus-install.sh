@@ -58,7 +58,7 @@ service:
       use_prerelease: false
     dashboard:
       icon: https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/refs/heads/main/misc/images/logo.png
-      icon_link_to: https://Daniel-Saprykin.org/
+      icon_link_to: https://github.com/
       web_url: https://github.com/Daniel-Saprykin/ProxmoxVE/releases
 EOF
 msg_ok "Setup Config"

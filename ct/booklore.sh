@@ -11,5 +11,5 @@ color
 
 msg_error "This script is no longer available in Daniel-Saprykin."
 msg_error "The Booklore or the Grimmory Fork will for now not return to Daniel-Saprykin. Due to the unstable nature of these projects we decided to remove them and will decide at later point if they come back, which will most likley not happen. Plese do not create Issues for this."
-msg_warn "More info: https://Daniel-Saprykin.org/scripts/booklore"
+msg_warn "More info: https://github.com/scripts/booklore"
 exit 1

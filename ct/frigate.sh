@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://git.Daniel-Saprykin.org/Daniel-Saprykin/ProxmoxVE/raw/branch/main/misc/build.func)
+source <(curl -fsSL https://git.github.com/Daniel-Saprykin/ProxmoxVE/raw/branch/main/misc/build.func)
 # Copyright (c) 2021-2026 Daniel-Saprykin ORG
 # Authors: MickLesk (CanbiZ) | Co-Author: remz1337
 # License: MIT | https://github.com/Daniel-Saprykin/ProxmoxVE/raw/main/LICENSE

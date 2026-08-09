@@ -279,7 +279,7 @@ jobs:
                 "",
                 'msg_error "This script is no longer available in Daniel-Saprykin."',
                 `msg_error "${deletedMessage.replace(/"/g, '\\"')}"`,
-                `msg_warn "More info: https://Daniel-Saprykin.org/scripts/${slug}"`,
+                `msg_warn "More info: https://github.com/scripts/${slug}"`,
                 "exit 1"
               ].join('\n') + '\n';
               fs.writeFileSync(stubPath, content);

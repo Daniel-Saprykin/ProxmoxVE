@@ -6,7 +6,7 @@
   A community project — built on the foundation of <a href="https://github.com/tteck">@tteck</a>'s original work</p>
 
   <p>
-    <a href="https://Daniel-Saprykin.org"><img src="https://img.shields.io/badge/Website-community--scripts.org-4c9b3f?style=flat-square" /></a>
+    <a href="https://github.com"><img src="https://img.shields.io/badge/Website-community--scripts.org-4c9b3f?style=flat-square" /></a>
     <a href="https://discord.gg/3AnUqsXnmK"><img src="https://img.shields.io/badge/Discord-Join_us-7289da?style=flat-square&logo=discord&logoColor=white" /></a>
     <a href="https://github.com/Daniel-Saprykin/ProxmoxVE/stargazers"><img src="https://img.shields.io/github/stars/Daniel-Saprykin/ProxmoxVE?style=flat-square&label=Stars&color=f5a623" /></a>
     <a href="https://github.com/Daniel-Saprykin/ProxmoxVE/blob/main/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-view-6c5ce7?style=flat-square" /></a>
@@ -41,7 +41,7 @@ The collection covers hundreds of services across categories like home automatio
 
 The fastest way to find and run scripts:
 
-1. Go to **[Daniel-Saprykin.org](https://Daniel-Saprykin.org)**
+1. Go to **[github.com](https://github.com)**
 2. Search for the service you want (e.g. "Home Assistant", "Nginx Proxy Manager", "Jellyfin")
 3. Copy the one-line install command from the script page
 4. Open your **Proxmox Shell** and paste it
@@ -81,7 +81,7 @@ The repository covers a wide range of categories. A few examples:
 | Security        | Vaultwarden, CrowdSec, Authentik                    |
 | Dev & Tools     | Gitea, Portainer, VS Code Server, n8n               |
 
-> Browse the full list at **[Daniel-Saprykin.org/categories](https://Daniel-Saprykin.org/categories)** — new scripts are added regularly.
+> Browse the full list at **[github.com/categories](https://github.com/categories)** — new scripts are added regularly.
 
 ---
 
@@ -203,8 +203,8 @@ This project is maintained by volunteers. All infrastructure costs come out of p
     <img src="https://img.shields.io/badge/Support_on_Ko--fi-FF5F5F?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi" />
   </a>
   &nbsp;
-  <a href="https://Daniel-Saprykin.org/donate">
-    <img src="https://img.shields.io/badge/Donate-community--scripts.org%2Fdonate-4c9b3f?style=for-the-badge" alt="Donate via Daniel-Saprykin.org" />
+  <a href="https://github.com/donate">
+    <img src="https://img.shields.io/badge/Donate-community--scripts.org%2Fdonate-4c9b3f?style=for-the-badge" alt="Donate via github.com" />
   </a>
 </div>
 

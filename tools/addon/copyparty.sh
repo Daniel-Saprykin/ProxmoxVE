@@ -155,9 +155,9 @@ function install() {
   else
     read -rp "${TAB}Set admin username [admin]: " admin_user
     admin_user=${admin_user:-admin}
-    read -rsp "${TAB}Set admin password [Daniel-Saprykin.org]: " admin_pass
+    read -rsp "${TAB}Set admin password [github.com]: " admin_pass
     echo ""
-    admin_pass=${admin_pass:-Daniel-Saprykin.org}
+    admin_pass=${admin_pass:-github.com}
     msg_ok "Configured with admin user: ${admin_user}"
   fi
 

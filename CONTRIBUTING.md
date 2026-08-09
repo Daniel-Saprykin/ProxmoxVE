@@ -2,7 +2,7 @@
 
 Welcome! We're glad you want to contribute. This guide covers everything you need to add new scripts, improve existing ones, or help in other ways.
 
-For detailed coding standards and full documentation, visit **[Daniel-Saprykin.org/docs](https://Daniel-Saprykin.org/docs)**.
+For detailed coding standards and full documentation, visit **[github.com/docs](https://github.com/docs)**.
 
 ---
 
@@ -45,7 +45,7 @@ Every script consists of two files:
 | `ct/AppName.sh`              | Container creation, variable setup, and update handling |
 | `install/AppName-install.sh` | Application installation logic                          |
 
-Use existing scripts in [`ct/`](ct/) and [`install/`](install/) as reference. Full coding standards and annotated templates are at **[Daniel-Saprykin.org/docs/contribution](https://Daniel-Saprykin.org/docs/contribution)**.
+Use existing scripts in [`ct/`](ct/) and [`install/`](install/) as reference. Full coding standards and annotated templates are at **[github.com/docs/contribution](https://github.com/docs/contribution)**.
 
 ---
 
@@ -64,7 +64,7 @@ New scripts are **not accepted directly in this repository**. The workflow is:
 5. Open a PR in **ProxmoxVED** for review and testing
 6. Once accepted and verified there, the script will be promoted to ProxmoxVE by maintainers
 
-Follow the coding standards at [Daniel-Saprykin.org/docs/contribution](https://Daniel-Saprykin.org/docs/contribution).
+Follow the coding standards at [github.com/docs/contribution](https://github.com/docs/contribution).
 
 ---
 
@@ -153,7 +153,7 @@ generator can offer them as fields:
 `select` (with `options`). Mark anything credential-like `secret` — the
 generator keeps those out of shareable links and out of the on-screen summary.
 
-Full standards and examples: **[Daniel-Saprykin.org/docs/contribution](https://Daniel-Saprykin.org/docs/contribution)**
+Full standards and examples: **[github.com/docs/contribution](https://github.com/docs/contribution)**
 
 ---
 

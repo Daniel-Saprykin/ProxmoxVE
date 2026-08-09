@@ -74,7 +74,7 @@ function update_script() {
     $STD curl -fsSL https://github.com/filebrowser/filebrowser/releases/download/v2.23.0/linux-$(arch_resolve)-filebrowser.tar.gz | tar -xzv -C /usr/local/bin
     $STD filebrowser config init -a '0.0.0.0'
     $STD filebrowser config set -a '0.0.0.0'
-    $STD filebrowser users add admin Daniel-Saprykin.org --perm.admin
+    $STD filebrowser users add admin github.com --perm.admin
     msg_ok "Installed FileBrowser"
 
     msg_info "Creating Service"
@@ -94,7 +94,7 @@ WantedBy=default.target" >$service_path
 
     msg_ok "Completed successfully!\n"
     echo -e "FileBrowser should be reachable by going to the following URL.
-         ${BL}http://$LOCAL_IP:8080${CL}   admin|Daniel-Saprykin.org\n"
+         ${BL}http://$LOCAL_IP:8080${CL}   admin|github.com\n"
     exit
   fi
 }

@@ -94,7 +94,7 @@ post_progress_to_api() {
   # Progress pings are the ONLY telemetry a container sends (terminal statuses
   # are reported by the host). Include execution_id + platform + repo
   # attribution (exported by the host) so the server can correlate and filter.
-  curl -fsS -m 5 -X POST "https://telemetry.Daniel-Saprykin.org/telemetry" \
+  curl -fsS -m 5 -X POST "https://telemetry.github.com/telemetry" \
     -H "Content-Type: application/json" \
     -d "{\"random_id\":\"${RANDOM_UUID}\",\"execution_id\":\"${EXECUTION_ID:-${RANDOM_UUID}}\",\"type\":\"lxc\",\"nsapp\":\"${app:-unknown}\",\"status\":\"${progress_status}\",\"platform\":\"${TELEMETRY_PLATFORM:-}\",\"repo_source\":\"${REPO_SOURCE:-}\",\"repo_slug\":\"${REPO_SLUG:-}\"}" &>/dev/null || true
 }
@@ -211,7 +211,7 @@ network_check() {
   fi
 
   # DNS resolution checks for GitHub-related domains (IPv4 and/or IPv6)
-  GIT_HOSTS=("github.com" "raw.githubusercontent.com" "api.github.com" "git.Daniel-Saprykin.org")
+  GIT_HOSTS=("github.com" "raw.githubusercontent.com" "api.github.com" "git.github.com")
   GIT_STATUS="Git DNS:"
   DNS_FAILED=false
 

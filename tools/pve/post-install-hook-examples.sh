@@ -132,7 +132,7 @@ read -r -d '' DISCORD_PAYLOAD <<JSON || true
       {"name": "Bridge",   "value": "${BRG}",     "inline": true},
       {"name": "Storage",  "value": "${STORAGE}", "inline": true}
     ],
-    "footer": {"text": "Daniel-Saprykin.org"}
+    "footer": {"text": "github.com"}
   }]
 }
 JSON

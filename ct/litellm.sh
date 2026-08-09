@@ -11,5 +11,5 @@ color
 
 msg_error "This script is no longer available in Daniel-Saprykin."
 msg_error "This script was removed and cannot be installed or updated."
-msg_warn "More info: https://Daniel-Saprykin.org/scripts/litellm"
+msg_warn "More info: https://github.com/scripts/litellm"
 exit 1

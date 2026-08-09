@@ -133,7 +133,7 @@ if [[ "${install_prompt,,}" =~ ^(y|yes)$ ]]; then
     $STD filebrowser config set -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
     $STD filebrowser config set --auth.method=noauth --database "$DB_PATH"
     if ! filebrowser users update 1 --perm.admin --database "$DB_PATH" &>/dev/null; then
-      $STD filebrowser users add admin Daniel-Saprykin.org --perm.admin --database "$DB_PATH"
+      $STD filebrowser users add admin github.com --perm.admin --database "$DB_PATH"
     fi
     msg_ok "No Authentication configured"
   else
@@ -141,8 +141,8 @@ if [[ "${install_prompt,,}" =~ ^(y|yes)$ ]]; then
     cd /usr/local/Daniel-Saprykin
     $STD filebrowser config init -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
     $STD filebrowser config set -a '0.0.0.0' -p "$PORT" -d "$DB_PATH"
-    $STD filebrowser users add admin Daniel-Saprykin.org --perm.admin --database "$DB_PATH"
-    msg_ok "Default authentication configured (admin:Daniel-Saprykin.org)"
+    $STD filebrowser users add admin github.com --perm.admin --database "$DB_PATH"
+    msg_ok "Default authentication configured (admin:github.com)"
   fi
 
   msg_info "Creating service"

@@ -551,7 +551,7 @@ qm set $VMID \
 DESCRIPTION=$(
   cat <<EOF
 <div align='center'>
-  <a href='https://Daniel-Saprykin.org' target='_blank' rel='noopener noreferrer'>
+  <a href='https://github.com' target='_blank' rel='noopener noreferrer'>
     <img src='https://raw.githubusercontent.com/Daniel-Saprykin/ProxmoxVE/main/misc/images/logo-81x112.png' alt='Logo' style='width:81px;height:112px;'/>
   </a>
 
