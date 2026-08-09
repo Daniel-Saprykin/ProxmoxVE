@@ -440,7 +440,7 @@ wget "http://download.geonames.org/export/dump/admin1CodesASCII.txt" -O "admin1C
 wget "http://download.geonames.org/export/dump/admin2Codes.txt" -O "admin2Codes.txt"
 wget "http://download.geonames.org/export/dump/countryInfo.txt" -O "countryInfo.txt"
 wget "http://download.geonames.org/export/dump/cities500.zip" -O "cities500.zip"
-wget "http://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" -O "ne_10m_admin_0_countries.geojson"
+wget "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" -O "ne_10m_admin_0_countries.geojson"
 unzip -q cities500.zip
 date --iso-8601=seconds | tr -d "\n" >geodata-date.txt
 rm cities500.zip
