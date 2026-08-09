@@ -437,9 +437,9 @@ ln -s "$UPLOAD_DIR" "$ML_DIR"/upload
 msg_info "Installing GeoNames data"
 cd "$GEO_DIR"
 wget "http://192.168.88.118:8000/admin1CodesASCII.txt" -O "admin1CodesASCII.txt"
-wget "http://192.168.88.118:8000//admin2Codes.txt" -O "admin2Codes.txt"
-wget "http://192.168.88.118:8000//countryInfo.txt" -O "countryInfo.txt"
-wget "http://192.168.88.118:8000//cities500.zip" -O "cities500.zip"
+wget "http://192.168.88.118:8000/admin2Codes.txt" -O "admin2Codes.txt"
+wget "http://192.168.88.118:8000/countryInfo.txt" -O "countryInfo.txt"
+wget "http://192.168.88.118:8000/cities500.zip" -O "cities500.zip"
 wget "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson" -O "ne_10m_admin_0_countries.geojson"
 unzip -q cities500.zip
 date --iso-8601=seconds | tr -d "\n" >geodata-date.txt
